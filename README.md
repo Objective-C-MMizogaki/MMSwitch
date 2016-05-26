@@ -31,31 +31,32 @@ QuartzCore.framework
 The simplest way to get up and running with MMSwitch is to display a default view. Inside of your view controller, write the following code:
 
 ``` objective-c
-    #pragma mark - viewDidLoad
-    
-    [self.MMSwitch setOnButtonText:@"ON"
-                   setButtonTextColer:[UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:1.0]
-                       setOnTextColer:[UIColor colorWithRed:0.902 green:0.902 blue:0.902 alpha:1.0]
-                     setOffButtonText:@"OFF"
-                setTextButtonOffColer:[UIColor colorWithRed:0.502 green:0.502 blue:0.502 alpha:1.0]
-                      setOffTextColer:[UIColor colorWithRed:0.902 green:0.902 blue:0.902 alpha:1.0]
-                      setTextFontSize:8];
-    
-    [self.MMSwitch setTintColor:[UIColor colorWithRed:0.7043f green:0.806f blue:0.806f alpha:1.0f]];
-    [self.MMSwitch setOnTintColor:[UIColor colorWithRed:0.4f green:0.4f blue:0.4f alpha:1.0f]];
-    [self.MMSwitch setOffTintColor:[UIColor colorWithRed:0.4f green:0.4f blue:0.4f alpha:1.0f]];
-    [self.MMSwitch setThumbTintColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]];
-    
-    #pragma mark - select received/send
 
-    - (IBAction)MMSwitch:(id)sender {
+- (void)viewDidLoad {
+
+    [super viewDidLoad];
+    [self.rnnSwich setOnButtonText:@"ON"
+                setButtonTextColer:[UIColor colorWithRed:0.0 green:0.251 blue:0.502 alpha:1.0]
+                    setOnTextColer:[UIColor colorWithRed:1.0 green:0.4 blue:0.4 alpha:1.0]
+                  setOffButtonText:@"OFF"
+             setTextButtonOffColer:[UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:1.0]
+                   setOffTextColer:[UIColor colorWithRed:1.0 green:0.0 blue:0.502 alpha:1.0]
+                   setTextFontSize:17];
     
-        if (self.MMSwitch.on == YES) {
-          NSLog(@"ON");
-        }else{
-          NSLog(@"OFF");
-        }
+    [self.rnnSwich setTintColor:[UIColor colorWithRed:0.7043f green:0.806f blue:0.806f alpha:1.0f]];
+    [self.rnnSwich setOnTintColor:[UIColor colorWithRed:0.0f green:1.0f blue:0.502f alpha:1.0f]];
+    [self.rnnSwich setOffTintColor:[UIColor colorWithRed:0.4f green:1.0f blue:0.8f alpha:1.0f]];
+    [self.rnnSwich setThumbTintColor:[UIColor colorWithRed:1.0 green:0.4 blue:1.0 alpha:1.0]];
+}
+
+- (IBAction)nenennene:(id)sender {
+    
+    if (self.rnnSwich.on == YES) {
+        NSLog(@"ON");
+    }else {
+        NSLog(@"OFF");
     }
+}
     
 ```
 
@@ -88,5 +89,5 @@ THE SOFTWARE.
 
 ## Author
 
-[MizogakiMasahito](https://github.com/MMasahito)
+[MizogakiMasahito](https://github.com/MMizogaki)
 
